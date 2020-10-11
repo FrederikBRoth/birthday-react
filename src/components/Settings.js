@@ -34,9 +34,7 @@ function Settings() {
             const data = await postName(name)
             var audio = document.getElementById('audio');
             var source = document.getElementById('audio-source');
-            const response = await polling(data)
-            console.log(response)
-            source.src = "http://192.168.1.71:5000/" + data
+            source.src = "http://192.168.1.71:5000/api/song/" + data
             console.log(source.src)
             // source.src = "http://192.168.1.71:5000/c0PHe1dLOQaCdOhShj6-htAyy9Q1UYWC.mp3"
             audio.load()
