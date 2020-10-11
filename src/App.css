@@ -1,7 +1,12 @@
 .App {
   text-align: center;
+  font: 6em sans-serif bold;
+  background-image: "./rats.gif";
 }
 
+html{
+  
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +40,87 @@
   to {
     transform: rotate(360deg);
   }
+}
+.main {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("rats.gif");
+  background-size: 100vw 100vh;
+}
+.settings-parent {
+	position: fixed;
+	top: -200px;
+	left: 0;
+	height: 250px;
+	width: 100vw;
+  transition: top 0.5s;
+}
+.settings-window {
+  position: relative;
+	height: 200px;
+	width: 100vw;
+  background: linear-gradient(180deg, rgb(26, 209, 181) 0%, rgb(15, 53, 76) 100%);
+  transition: top 0.3s;
+}
+.settings-button {
+  z-index: -1;
+  position: relative;
+  margin: 0 auto;
+	height: 50px;
+  width: 10vw;
+  top: -40px;
+  background-color: rgb(15, 53, 76);
+  transition: top 0.3s;
+  border-radius: 0 0 10px 10px;
+}
+.settings-parent.open-nav {
+	top: 0px;
+}
+
+.settings-button.open-button {
+	top: 0px;
+}
+
+.settings {
+  text-align: center;
+  position: inherit; 
+  padding: 20px;
+
+}
+
+.settings-text{
+  
+	margin: 0 20px 20px 20px;
+	padding: 20px;
+  background-color: rgb(34, 124, 111);
+  border-radius: 2px;
+  border-color:  rgb(15, 53, 76);
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.settings-confirm {
+	display: inline-block;
+	justify-content: space-between;
+}
+
+.settings-confirm button {
+	padding: 10px 20px 10px 20px;
+	border: 0;
+	height: 5vh;
+	background-color: rgb(34, 124, 111);
+  transition: background-color 0.2s;
+  color: aliceblue;
+  outline: 0
+}
+
+.settings-confirm button:hover {
+	background-color: rgb(52, 167, 149);
+}
+.dance-gif {
+  width: 100vw;
+  height: 100vh;
 }
