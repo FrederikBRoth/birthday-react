@@ -1,4 +1,5 @@
 .App {
+  z-index: -1;
   text-align: center;
   font: 6em sans-serif bold;
   background-image: "./rats.gif";
@@ -49,6 +50,7 @@ html{
   background-size: 100vw 100vh;
 }
 .settings-parent {
+  z-index: 1;
 	position: fixed;
 	top: -200px;
 	left: 0;
@@ -57,6 +59,7 @@ html{
   transition: top 0.5s;
 }
 .settings-window {
+  z-index: 1;
   position: relative;
 	height: 200px;
 	width: 100vw;
@@ -64,7 +67,7 @@ html{
   transition: top 0.3s;
 }
 .settings-button {
-  z-index: -1;
+  z-index: 0;
   position: relative;
   margin: 0 auto;
 	height: 50px;
@@ -103,8 +106,7 @@ html{
 }
 
 .settings-confirm {
-	display: inline-block;
-	justify-content: space-between;
+	
 }
 
 .settings-confirm button {
@@ -123,4 +125,152 @@ html{
 .dance-gif {
   width: 100vw;
   height: 100vh;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background-color: rgba(15, 53, 76, 0.5);
+}
+
+.loading-message {
+  position: relative;
+  text-align: center;
+  margin-top: 50vh;
+  font-size: 80px;
+  color: rgb(15, 53, 76);
+  background-color: rgb(52, 167, 149);
+}
+
+.loading-circle {
+  position: absolute;
+  text-align: center;
+  top: 99%;
+  width: 100vw;
+  height: 10vh;
+  background-color: rgb(52, 167, 149);
+}
+
+.profile-main-loader{
+  left: 50% !important;
+  margin-left:-100px;
+  position: fixed !important;
+  top: 50% !important;
+  margin-top: -100px;
+  width: 45px;
+  z-index: 9000 !important;
+}
+
+.profile-main-loader .loader {
+position: relative;
+margin: 0px auto;
+width: 200px;
+height:200px;
+}
+.profile-main-loader .loader:before {
+content: '';
+display: block;
+padding-top: 100%;
+}
+
+.circular-loader {
+-webkit-animation: rotate 2s linear infinite;
+        animation: rotate 2s linear infinite;
+height: 100%;
+-webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+        transform-origin: center center;
+width: 100%;
+position: absolute;
+top: 0;
+left: 0;
+margin: auto;
+}
+
+.loader-path {
+stroke-dasharray: 150,200;
+stroke-dashoffset: -10;
+-webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+        animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+stroke-linecap: round;
+}
+
+div[disabled]
+{
+  pointer-events: none;
+  opacity: 0.0;
+}
+
+@-webkit-keyframes rotate {
+100% {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+}
+
+@keyframes rotate {
+100% {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+}
+@-webkit-keyframes dash {
+0% {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+}
+50% {
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -35;
+}
+100% {
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -124;
+}
+}
+@keyframes dash {
+0% {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+}
+50% {
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -35;
+}
+100% {
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -124;
+}
+}
+@-webkit-keyframes color {
+0% {
+  stroke: rgb(15, 53, 76);
+}
+40% {
+  stroke: rgb(15, 53, 76);
+}
+66% {
+  stroke: rgb(15, 53, 76);
+}
+80%, 90% {
+  stroke:rgb(15, 53, 76);
+}
+}
+@keyframes color {
+0% {
+  stroke: rgb(15, 53, 76);
+}
+40% {
+  stroke: rgb(15, 53, 76);
+}
+66% {
+  stroke: rgb(15, 53, 76);
+}
+80%, 90% {
+  stroke: rgb(15, 53, 76);
+}
 }

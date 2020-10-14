@@ -19,17 +19,17 @@ function App() {
   }
 
   return (
-    <div className="main" id="main" onClick={handleClick}>
+    <div className="main" id="main">
       <Router>
-
-        {/* <img class="dance-gif" src={require("./rats.gif")} alt="Family dancing to son's happy birthday song"/> */}
-
         <Switch>
           <Route path="/:test?">
             <Settings />
           </Route>
         </Switch>
       </Router>
+      <div className="">
+
+      </div>
     </div>
 
   );
