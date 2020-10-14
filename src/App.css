@@ -137,6 +137,7 @@ html{
   background-color: rgba(15, 53, 76, 0.5);
 }
 
+
 .loading-message {
   position: relative;
   text-align: center;
@@ -145,13 +146,47 @@ html{
   color: rgb(15, 53, 76);
   background-color: rgb(52, 167, 149);
 }
+.click-birthday {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background-color: rgba(15, 53, 76, 0.5);
+}
 
+.click-birthday p{
+  position: relative;
+  text-align: center;
+  margin-top: 50vh;
+  font-size: 80px;
+  color: rgb(15, 53, 76);
+  background-color: rgb(52, 167, 149);
+}
 .loading-circle {
   position: absolute;
   text-align: center;
   top: 99%;
   width: 100vw;
   height: 10vh;
+  background-color: rgb(52, 167, 149);
+}
+
+.download-button {
+  z-index: 5;
+  position: fixed;
+  bottom: 0;
+  padding: 10px 20px 10px 20px;
+	border: 0;
+	height: 5vh;
+	background-color: rgb(34, 124, 111);
+  transition: background-color 0.2s;
+  color: aliceblue;
+  outline: 0
+}
+
+.download-button:hover {
   background-color: rgb(52, 167, 149);
 }
 
